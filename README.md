@@ -1,6 +1,6 @@
 ## data-analysis-python ##
 
-**### Part I - Data analysis process using a dataset about Udacity student engagement: ###**
+### Part I - Data analysis process using a dataset about Udacity student engagement: ###
 Data Analysis Process include five phases:
 - **Data Familiarization phase:**
   - Define all data charactristics 
