@@ -8,5 +8,5 @@
 - Draw conclusions phase
 - Communication phase
 
-### Part II (To be added soon): ###
+### Part II (Will be added soon): ###
 Numpy and Pandas for 1D data
