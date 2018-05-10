@@ -1,6 +1,6 @@
 # By Sasan Najar -- sasangnajar@gmail.com
 
-import unicodecsv
+import unicodecsv # pip install unicode
 from datetime import datetime as dt
 from collections import defaultdict
 import numpy as np
@@ -207,3 +207,30 @@ for student, total_minutes in total_minutes_by_account.items():
         student_with_max_minutes = student
 
 # print(max_minutes)
+
+#####
+
+subway_project_lesson_keys = ['746169184', '3176718735']
+pass_subway_project = set()
+
+for submission in paid_submissions:
+        project = submission['lesson_key']
+        rating = submission['assigned_rating']
+
+        if project in subway_project_lesson_keys and \
+            (rating == 'PASSED' or rating == 'DISTINCTION'):
+            pass_subway_project.add(submission['account_key'])
+
+# print(len(pass_subway_project))
+
+passing_engagement = []
+non_passing_engagement = []
+
+for engagement_record in paid_engagement_in_first_week:
+    if engagement_record['account_key'] in pass_subway_project:
+        passing_engagement.append(engagement_record)
+    else:
+        non_passing_engagement.append(engagement_record)
+
+# print(len(passing_engagement))
+# print(len(non_passing_engagement))
